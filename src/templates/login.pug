@@ -1,0 +1,24 @@
+doctype html
+html
+  include header.pug
+    div(class="container", id="login-container")
+      div(class="row")
+        div(class="col-md-6 offset-md-3")
+          br
+          h1(id="login-header") Welcome to Haven Crib
+          br
+          div
+            form(action="login" method="POST")
+              div(class="form-group")
+                label(for="userEmail" id="email-label") Email address
+                input(type="email" name = "userEmail" class="form-control" id="emailId" aria-describedby="emailHelp" placeholder="Enter email")
+                - var emailMessage = "Your email will be kept confidential."
+                small(id="emailHelp" class="form-text text-muted") #{emailMessage}
+
+              div(class="form-group")
+                label(for="userPassword") Password
+                input(type="password" name="userPassword" class="form-control" id="passwordId" placeholder="Password")
+
+              button(type="submit" class="btn btn-primary" id="signInButtonId") Submit
+
+              include footer.pug
