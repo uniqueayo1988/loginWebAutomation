@@ -1,0 +1,17 @@
+doctype html
+html
+  include header.pug
+    div(class="container", id="login-error-container")
+      div(class="row")
+        div(class="col")
+        div(class="col")
+          br
+          h1(id="login-error-label") Login Error
+          br
+          div(class="alert alert-primary" role="alert")
+            p Your login credentials are not valid.
+              a(href="/login" class="alert-link") Please try again.
+
+          include footer.pug
+
+        div(class="col")
